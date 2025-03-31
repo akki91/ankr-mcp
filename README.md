@@ -106,7 +106,7 @@ Give me the token balances for wallet adddress X for network Y.
 ```bash
 # Clone the repository
 git clone https://github.com/akki91/ankr-mcp.git
-cd onchain-mcp
+cd ankr-mcp
 
 # Install dependencies
 npm install
