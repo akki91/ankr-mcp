@@ -1,0 +1,40 @@
+{
+  "name": "@akki91/ankr-mcp",
+  "version": "0.0.1",
+  "description": "MCP server for using Ankr API(s)",
+  "license": "MIT",
+  "repository": "https://github.com/akki91/ankr-mcp",
+  "bugs": "https://github.com/akki91/ankr-mcp/issues",
+  "author": "Akshay khare",
+  "bin": {
+    "ankr-mcp": "dist/index.js"
+  },
+  "main": "dist/src/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "debug": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "watch": "tsc --watch",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.7.0",
+    "@types/node": "^22",
+    "@types/node-fetch": "^2.6.12",
+    "axios": "^1.8.3",
+    "node-fetch": "^3.3.2",
+    "universal-user-agent": "^7.0.2",
+    "zod": "^3.24.2",
+    "zod-to-json-schema": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}
