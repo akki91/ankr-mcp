@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/akki91-ankr-mcp-badge.png)](https://mseep.ai/app/akki91-ankr-mcp)
+
 #  Ankr API MCP Server
 
 
