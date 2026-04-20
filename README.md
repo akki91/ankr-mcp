@@ -6,17 +6,41 @@ MCP (Model Context Protocol) server for blockchain data through the [Ankr](https
 
 ## Overview
 
-The Ankr MCP Server fetches on-chain data via the Ankr API. It implements the MCP to allow LLMs  blockchain data.
+The Ankr MCP Server fetches on-chain data via the Ankr API. It implements the MCP to allow LLMs to query blockchain data across 20+ chains.
 
 ## Features
 
-The server provides the following onchain data operations:
+The server provides 21 tools across all Ankr Advanced API categories:
 
 ### Token Operations
 
-- **Get Account balance** (`get_token_balances_on_network`): Gets all token balances for a given address on a specific network
-    - Parameters: network, wallet/account address
-    - Returns: Asset data for that wallet on the chain,
+- **Get Token Balances** (`get_token_balances`): Gets all token balances for a wallet on a specific blockchain
+- **Get Currencies** (`get_currencies`): Lists all available currencies on a blockchain
+- **Get Token Price** (`get_token_price`): Gets current USD price for any token
+- **Get Token Holders** (`get_token_holders`): Lists holder addresses for a token
+- **Get Token Holders Count** (`get_token_holders_count`): Gets historical holder count data
+- **Get Token Transfers** (`get_token_transfers`): Gets token transfer history for addresses
+- **Get Token Price History** (`get_token_price_history`): Gets historical price data over time
+- **Explain Token Price** (`explain_token_price`): Breaks down how a token price is derived
+
+### NFT Operations
+
+- **Get NFTs by Owner** (`get_nfts_by_owner`): Gets all NFTs owned by a wallet
+- **Get NFT Metadata** (`get_nft_metadata`): Gets metadata (name, image, traits) for a specific NFT
+- **Get NFT Holders** (`get_nft_holders`): Gets all holders of an NFT collection
+- **Get NFT Transfers** (`get_nft_transfers`): Gets NFT transfer history
+
+### Query Operations
+
+- **Get Blockchain Stats** (`get_blockchain_stats`): Gets chain statistics (transactions, block time, etc.)
+- **Get Blocks** (`get_blocks`): Gets full block data for a block range
+- **Get Logs** (`get_logs`): Gets historical event log data
+- **Get Transactions by Hash** (`get_transactions_by_hash`): Looks up a transaction by hash
+- **Get Transactions by Address** (`get_transactions_by_address`): Gets all transactions for an address
+- **Get Interactions** (`get_interactions`): Lists all chains a wallet has interacted with
+- **Get Account Balance Historical** (`get_account_balance_historical`): Gets balance at a past block height
+- **Get Internal Transactions by Block** (`get_internal_transactions_by_block`): Gets internal txns in a block
+- **Get Internal Transactions by Parent Hash** (`get_internal_transactions_by_parent_hash`): Gets internal txns from a parent tx
 
 ## Installation
 
@@ -94,10 +118,59 @@ Follow the instructions below to update your settings and ensure that your MCP s
 
 By following these steps, your Ankr MCP configuration should now be integrated into Claude Desktop, allowing you to access its tools directly through the interface.
 
-### Sample chat prompt
+### Sample Chat Prompts
 
+Here are example prompts you can use with this MCP server in Claude or any compatible AI:
+
+#### Token Queries
 ```
-Give me the token balances for wallet adddress X for network Y.
+What are the token balances for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 on Ethereum?
+```
+```
+What's the current price of USDC on Ethereum?
+```
+```
+Show me the price history of ETH over the last 30 days.
+```
+```
+How many holders does the LINK token have on Ethereum?
+```
+```
+Show me recent token transfers for vitalik.eth on Polygon.
+```
+
+#### NFT Queries
+```
+What NFTs does 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 own?
+```
+```
+Get me the metadata for Bored Ape #1234.
+```
+```
+Who holds NFTs from the CryptoPunks collection?
+```
+```
+Show me recent NFT transfers for this wallet on Ethereum.
+```
+
+#### Blockchain & Transaction Queries
+```
+What are the current stats for Ethereum and Polygon?
+```
+```
+Which blockchains has wallet 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 interacted with?
+```
+```
+Look up transaction 0x1234abcd... and decode the logs.
+```
+```
+Show me the latest blocks on Arbitrum with transactions included.
+```
+```
+What were the internal transactions in Ethereum block 19000000?
+```
+```
+What was my wallet balance at block 17000000?
 ```
 ## Development
 
@@ -113,6 +186,12 @@ npm install
 
 # Build the project
 npm run build
+```
+
+### Running Tests
+
+```bash
+npm test
 ```
 
 ### Debug Mode

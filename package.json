@@ -1,6 +1,6 @@
 {
   "name": "@akki91/ankr-mcp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "MCP server for using Ankr API(s)",
   "license": "MIT",
   "repository": "https://github.com/akki91/ankr-mcp",
