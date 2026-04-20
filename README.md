@@ -1,5 +1,3 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/akki91-ankr-mcp-badge.png)](https://mseep.ai/app/akki91-ankr-mcp)
-
 [![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/a9bc2b38-fc54-40a4-aa0f-a9af4a523a8b)
 
 #  Ankr API MCP Server
@@ -208,3 +206,6 @@ npm run debug
 
 ### Sources 
 This project is inspired from list of servers created [here](https://github.com/modelcontextprotocol/servers/) 
+
+## Verification
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/akki91-ankr-mcp-badge.png)](https://mseep.ai/app/akki91-ankr-mcp)
