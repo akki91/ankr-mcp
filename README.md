@@ -1,5 +1,7 @@
 [![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/a9bc2b38-fc54-40a4-aa0f-a9af4a523a8b)
 
+[![MCP Badge](https://lobehub.com/badge/mcp/akki91-ankr-mcp)](https://lobehub.com/mcp/akki91-ankr-mcp)
+
 #  Ankr API MCP Server
 
 
